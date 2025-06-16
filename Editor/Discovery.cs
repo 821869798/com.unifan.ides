@@ -11,17 +11,15 @@ namespace Microsoft.Unity.VisualStudio.Editor
 {
 	internal static class Discovery
 	{
-		public static IEnumerable<IVisualStudioInstallation> GetVisualStudioInstallations()
+		public static IEnumerable<IVisualStudioInstallation> GetInstallations()
 		{
-#if UNITY_EDITOR_WIN
-			foreach (var installation in VisualStudioForWindowsInstallation.GetVisualStudioInstallations())
+			foreach (var installation in KiroInstallation.GetInstallations())
 				yield return installation;
-#elif UNITY_EDITOR_OSX
-			foreach (var installation in VisualStudioForMacInstallation.GetVisualStudioInstallations())
-				yield return installation;
-#endif
 
-			foreach (var installation in VisualStudioCodeInstallation.GetVisualStudioInstallations())
+			foreach (var installation in CursorInstallation.GetInstallations())
+				yield return installation;
+
+			foreach (var installation in WindsurfInstallation.GetInstallations())
 				yield return installation;
 		}
 
@@ -29,14 +27,13 @@ namespace Microsoft.Unity.VisualStudio.Editor
 		{
 			try
 			{
-#if UNITY_EDITOR_WIN
-				if (VisualStudioForWindowsInstallation.TryDiscoverInstallation(editorPath, out installation))
+				if (KiroInstallation.TryDiscoverInstallation(editorPath, out installation))
 					return true;
-#elif UNITY_EDITOR_OSX
-				if (VisualStudioForMacInstallation.TryDiscoverInstallation(editorPath, out installation))
+
+				if (CursorInstallation.TryDiscoverInstallation(editorPath, out installation))
 					return true;
-#endif
-				if (VisualStudioCodeInstallation.TryDiscoverInstallation(editorPath, out installation))
+
+				if (WindsurfInstallation.TryDiscoverInstallation(editorPath, out installation))
 					return true;
 			}
 			catch (IOException)
@@ -47,14 +44,11 @@ namespace Microsoft.Unity.VisualStudio.Editor
 			return false;
 		}
 
-		public static void Initialize()
+		public static void Initialize() // ?
 		{
-#if UNITY_EDITOR_WIN
-			VisualStudioForWindowsInstallation.Initialize();
-#elif UNITY_EDITOR_OSX
-			VisualStudioForMacInstallation.Initialize();
-#endif
-			VisualStudioCodeInstallation.Initialize();
+			KiroInstallation.Initialize();
+			CursorInstallation.Initialize();
+			WindsurfInstallation.Initialize();
 		}
 	}
 }
