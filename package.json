@@ -1,6 +1,6 @@
 {
-  "name": "com.unity.ides",
-  "displayName": "Multi IDEs",
+  "name": "com.unifan.ides",
+  "displayName": "Multi AI IDEs",
   "description": "Code editor integration for supporting multiple IDEs as code editor for unity. Adds support for generating csproj files for intellisense purposes, auto discovery of installations, etc.",
   "version": "1.1.0",
   "unity": "2019.4",
