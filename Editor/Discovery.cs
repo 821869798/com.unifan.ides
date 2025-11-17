@@ -13,6 +13,15 @@ namespace Microsoft.Unity.VisualStudio.Editor
 	{
 		public static IEnumerable<IVisualStudioInstallation> GetInstallations()
 		{
+			foreach (var installation in TraeInstallation.GetInstallations())
+				yield return installation;
+
+			foreach (var installation in TraeCNInstallation.GetInstallations())
+				yield return installation;
+
+			foreach (var installation in QoderInstallation.GetInstallations())
+				yield return installation;
+
 			foreach (var installation in KiroInstallation.GetInstallations())
 				yield return installation;
 
@@ -27,6 +36,15 @@ namespace Microsoft.Unity.VisualStudio.Editor
 		{
 			try
 			{
+				if (TraeCNInstallation.TryDiscoverInstallation(editorPath, out installation))
+					return true;
+
+				if (TraeInstallation.TryDiscoverInstallation(editorPath, out installation))
+					return true;
+
+				if (QoderInstallation.TryDiscoverInstallation(editorPath, out installation))
+					return true;
+
 				if (KiroInstallation.TryDiscoverInstallation(editorPath, out installation))
 					return true;
 
@@ -46,6 +64,9 @@ namespace Microsoft.Unity.VisualStudio.Editor
 
 		public static void Initialize() // ?
 		{
+			TraeInstallation.Initialize();
+			TraeCNInstallation.Initialize();
+			QoderInstallation.Initialize();
 			KiroInstallation.Initialize();
 			CursorInstallation.Initialize();
 			WindsurfInstallation.Initialize();

@@ -6,7 +6,7 @@ This package provides seamless multi-IDE support for Unity.
 ## Install
 Select `Window -> Package Manager` in Unity. After then, click the plus button and `Add package from git URL` paste this
 ```
-https://github.com/dunward/com.unity.ides.git
+https://github.com/821869798/com.unity.ides.git
 ```
 
 Now you can choose any IDEs you like.
@@ -14,6 +14,16 @@ Now you can choose any IDEs you like.
 ## Support IDE List
 Name | Windows | Mac | Linux
 ---- | ------- | --- | -----
+Trae | ✅ | ❓ | ❓
+Trae CN | ✅ | ❓ | ❓
+Qoder | ✅ | ❓ | ❓
 Cursor | ✅ | ✅ | ❓
 Windsurf | ✅ | ✅ | ❓
 Kiro | ✅ | ❓ | ❓
+
+
+## Attributions
+
+This project incorporates or is based upon work from the following sources:
+
+- [com.unity.ides](https://github.com/dunward/com.unity.ides)
