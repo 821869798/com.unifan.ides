@@ -1,13 +1,23 @@
 # Multi IDE Support for Unity
 
-No more install multiple IDE-specific packages like Cursor, Windsurf, Kiro.
+No more install multiple IDE-specific packages like Cursor, Windsurf, Kiro, Trae, Trae CN, Qoder.
 This package provides seamless multi-IDE support for Unity.
 
-## Install
-Select `Window -> Package Manager` in Unity. After then, click the plus button and `Add package from git URL` paste this
+## Installation
+
+### Option 1: OpenUPM CLI
+```bash
+openupm add com.unifan.ides
 ```
-https://github.com/821869798/com.unity.ides.git
-```
+
+### Option 2: OpenUPM Website installation steps
+[openupm-com.unifan.ides](https://openupm.com/packages/com.unifan.ides/#modal-manualinstallation)
+
+### Option 3: Git URL
+
+1. Open Unity Package Manager
+2. Click `+` → "Add package from git URL..."
+3. Enter: [https://github.com/821869798/com.unifan.ides.git](https://github.com/821869798/com.unifan.ides.git)
 
 Now you can choose any IDEs you like.
 
