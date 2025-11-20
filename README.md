@@ -1,6 +1,6 @@
 # Multi IDE Support for Unity
 
-No more install multiple IDE-specific packages like Cursor, Windsurf, Kiro, Trae, Trae CN, Qoder.
+No more install multiple IDE-specific packages like Cursor, Windsurf, Kiro, Trae, Trae CN, Qoder, Antigravity.
 This package provides seamless multi-IDE support for Unity.
 
 ## Installation
@@ -24,6 +24,7 @@ Now you can choose any IDEs you like.
 ## Support IDE List
 Name | Windows | Mac | Linux
 ---- | ------- | --- | -----
+Antigravity | ✅ | ❓ | ❓
 Trae | ✅ | ❓ | ❓
 Trae CN | ✅ | ❓ | ❓
 Qoder | ✅ | ❓ | ❓

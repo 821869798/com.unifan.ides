@@ -1,15 +1,15 @@
 {
   "name": "com.unifan.ides",
   "displayName": "Multi AI IDEs",
-  "description": "Code editor integration for supporting multiple IDEs as code editor for unity. Adds support for generating csproj files for intellisense purposes, auto discovery of installations, etc.",
-  "version": "1.1.0",
+  "description": "Code editor integration for supporting multiple AI IDEs as code editor for unity. Adds support for generating csproj files for intellisense purposes, auto discovery of installations, etc.",
+  "version": "1.2.0",
   "unity": "2019.4",
   "unityRelease": "25f1",
   "dependencies": {
     "com.unity.test-framework": "1.1.9"
   },
   "_upm": {
-    "changelog": "Integration:\n\n- Added support for Trae IDE.\n- Added support for Trae CN IDE.\n- Added support for Qoder IDE."
+    "changelog": "Integration:\n\n- Added support for Trae IDE.\n- Added support for Trae CN IDE.\n- Added support for Qoder IDE.\n- Added support for Antigravity IDE.\n- Added support for Cursor IDE.\n- Added support for Kiro IDE.\n- Added support for Windsurf IDE."
   },
   "upmCi": {
     "footprint": "74a5df56c8eb360db167269a677bc8e15ff95645"

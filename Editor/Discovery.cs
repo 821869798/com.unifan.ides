@@ -30,6 +30,9 @@ namespace Microsoft.Unity.VisualStudio.Editor
 
 			foreach (var installation in WindsurfInstallation.GetInstallations())
 				yield return installation;
+
+			foreach (var installation in AntigravityInstallation.GetInstallations())
+				yield return installation;
 		}
 
 		public static bool TryDiscoverInstallation(string editorPath, out IVisualStudioInstallation installation)
@@ -53,6 +56,9 @@ namespace Microsoft.Unity.VisualStudio.Editor
 
 				if (WindsurfInstallation.TryDiscoverInstallation(editorPath, out installation))
 					return true;
+
+				if (AntigravityInstallation.TryDiscoverInstallation(editorPath, out installation))
+					return true;
 			}
 			catch (IOException)
 			{
@@ -70,6 +76,7 @@ namespace Microsoft.Unity.VisualStudio.Editor
 			KiroInstallation.Initialize();
 			CursorInstallation.Initialize();
 			WindsurfInstallation.Initialize();
+			AntigravityInstallation.Initialize();
 		}
 	}
 }
